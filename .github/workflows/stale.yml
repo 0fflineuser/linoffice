@@ -1,0 +1,40 @@
+# .github/workflows/stale.yml
+
+name: Auto-close inactive issues
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # daily at 02:00 UTC
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+
+    steps:
+      - uses: actions/stale@v10
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Close issues directly after 90 days inactivity
+          days-before-issue-stale: 90
+          days-before-issue-close: 0
+
+          # No stale label
+          stale-issue-label: ""
+
+          # No warning comment
+          stale-issue-message: ""
+
+          # Optional close comment
+          close-issue-message: >
+            Automatically closed after 90 days of inactivity. Please leave a comment if this bug report is still relevant.
+
+          # Never touch issues with this label
+          exempt-issue-labels: pinned
+
+          # Disable PR handling
+          days-before-pr-stale: -1
