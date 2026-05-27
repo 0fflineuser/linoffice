@@ -111,7 +111,7 @@ Dependencies that need to be installed:
 - **Podman-Compose**
 - **FreeRDP**  (v3)
 - **Python3** (optional, for the GUI)
-- **PySide6** (optional, for the GUI)
+- **PySide6** (optional, for the GUI) (on Debian and Ubuntu based distributions you might also need to install the packages **python3-pyside6.qtwidgets** and **python3-pyside6.qtuitools**)
 
 >[!WARNING]
 >FreeRDP 3.23 is not working with LinOffice due to a bug. If your distro's version is FreeRDP 3.23, please try to downgrade to 3.22 or upgrade to a newer version if available.
