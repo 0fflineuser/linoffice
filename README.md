@@ -118,7 +118,7 @@ Dependencies that need to be installed:
 
 <details><summary>How to install the dependencies</summary>
 
-- Ubuntu & Debian: `sudo apt install podman podman-compose freerdp3 python3 pyside6` 
+- Ubuntu & Debian: `sudo apt install podman podman-compose freerdp3 python3 python3-pyside6 python3-pyside6.qtwidgets python3-pyside6.qtuitools` 
   - make sure your repo has FreeRDP v3 is only available from Debian 13 and Ubuntu 24.04 onwards; in older versions you need to use backports or install the Flatpak version of FreeRDP
   - PySide6 is only available from Debian 13 and Ubuntu 24.10 (!) onwards; in older versions you need to use backports or install them via `pip`
 - Arch: `sudo pacman -Syu podman podman-compose freerdp python pyside6`
