@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 SCRIPT_DIR="$HOME/.local/bin/linoffice"
 SCRIPT_NAME="$(basename "$0")"
 COMPOSE_PATH="$(realpath "${SCRIPT_DIR}/config/compose.yaml")"

@@ -3,6 +3,7 @@ import re
 import subprocess
 import os
 import signal
+import shutil
 import time
 
 from PySide6.QtWidgets import (
@@ -144,7 +145,8 @@ class Wizard(QWidget):
         # Debugging: Print the path to ensure it's correct
         print(f"Setup script path: {setup_script_path}")
 
-        self.process.setProgram("/bin/bash")
+        bash_path = shutil.which("bash") or "/bin/bash"
+        self.process.setProgram(bash_path)
         self.process.setArguments([setup_script_path])
         self.process.setProcessChannelMode(QProcess.MergedChannels)
         self.process.readyReadStandardOutput.connect(self.handle_output)

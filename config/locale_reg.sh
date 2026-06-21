@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Linux to Windows Regional Settings Converter
 # Extracts specific locale settings from Linux and creates Windows .reg file

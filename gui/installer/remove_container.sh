@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "This script will now delete the LinOffice podman container and all its data (i.e., the Windows virtual machine), using this command:\n 'podman rm -f LinOffice && podman volume rm linoffice_data'"
 
